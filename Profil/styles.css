@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap');
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'poppins',sans-serif;
+}
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(images/dark.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: change 4.5s infinite ease-in-out;
+}
+
+ /* ANIMATION MAIN*/ 
+
+.animation{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'poppins',sans-serif;
+    font-size: 50px;
+    letter-spacing: 1px;
+    color:rgb(255, 255, 255);
+    display: inline-block;
+    animation: fadeIn 1.5s forwards;
+    opacity: 0;
+    transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+.first{
+    display: inline-block;
+    animation: firstspan 3.5s forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    z-index: 1;
+    position: relative;
+    font-weight: 900;
+}
+.slide{
+    display: inline-flex;
+    overflow: hidden;
+}
+.second{
+    font-weight: 100;
+    z-index: -1;
+    display: inline-block;
+    animation: secondspan 3.5s forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+        transform: scale(1);
+    }
+    50%{
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }    
+}
+
+@keyframes firstspan{
+    0%{
+        transform: translateX(50%);
+    }
+    60%{
+        transform: translateX(50%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+@keyframes secondspan{
+    0%{
+        transform: translateX(-100%);
+    }
+    60%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+
+ /* NAV BAR*/ 
+
+  nav{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 80px;
+    line-height: 80px;
+    align-items: center;
+    background-color:rgb(41, 5, 91) ;
+}
+.navItems{
+    display: flex;
+}
+.navItems li{
+    list-style: none;
+    margin: 0 15px;
+}
+.navItems li a{
+    font-size: 25px;
+    color: #3d535f;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.navItems li:hover a,
+.links a:hover{
+    color: lightskyblue;
+
+}
+
+.links a{
+    font-size: 30px;
+    color: #3d535f;
+    margin: 25px 10px;
+}
+
+ /* PICTURE ANIMATION*/ 
+
+ @keyframes change{
+    50%
+    {
+      background-image: url(images/Light.jpg);
+    }
+   
+ }
+
+
+
+
+  
